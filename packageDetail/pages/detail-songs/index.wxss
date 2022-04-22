@@ -1,0 +1,22 @@
+/* pages/detail-songs/index.wxss */
+page {
+  box-sizing: border-box;
+  padding: 0 20rpx;
+}
+
+.song-list {
+  box-sizing: border-box;
+  width: 100vw;
+  transform: translateX(-20rpx);
+  padding: 0 10rpx;
+}
+
+.title {
+  margin: 0 10rpx;
+}
+
+.item {
+  display: inline-block;
+  margin: 10rpx;
+  width: calc(calc(100% / 2) - 20rpx);
+}

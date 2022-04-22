@@ -1,1 +1,13 @@
 /* pages/home-video/index.wxss */
+.video {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.item {
+  margin: 4rpx;
+  width: calc(calc(100% / 2) - 8rpx);
+  border-radius: 12rpx;
+  overflow: hidden;
+}

@@ -1,1 +1,77 @@
-/* pages/home-music/index.wxss */
+page {
+  box-sizing: border-box;
+}
+/* 轮播图样式 */
+.swiper-item {
+  display: flex;
+  box-sizing: border-box;
+  padding-left: 20rpx;
+}
+.swiper-item .image {
+  width: 100%;
+  border-radius: 12rpx;
+}
+.main {
+  padding: 0 20rpx;
+  height: 100%;
+}
+/* 播放工具栏 */
+.play-bar-placeholder {
+  height: 44px;
+}
+.play-bar {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 0 10rpx;
+  height: 44px;
+  box-shadow: 0 -1px 10px rgba(0, 0, 0, 0.1);
+  background-color: #fafafa;
+}
+.play-bar .left,
+.play-bar .right {
+  display: flex;
+  align-items: center;
+}
+.play-bar .left {
+  flex: 1;
+  /*  封面动画 */
+}
+.play-bar .left .album {
+  position: relative;
+  top: -8px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+.play-bar .left .name {
+  margin-left: 10px;
+  font-size: 14px;
+}
+.play-bar .left .album-animation {
+  animation: albumRotate 16s linear infinite;
+}
+.play-bar .right .icon {
+  width: 30px;
+  height: 30px;
+}
+.play-bar .right .play {
+  margin-right: 10rpx;
+  margin-top: 1px;
+  width: 25px;
+  height: 25px;
+}
+/* album动画 */
+@keyframes albumRotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

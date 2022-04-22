@@ -1,0 +1,33 @@
+<!-- pages/detail-video/index.wxml -->
+<wxs src="/utils/format.wxs" module="format"></wxs>
+<view class="detail-video">
+  <!-- 视频 -->
+  <video class="video" src="{{mvUrlInfo.url}}" autoplay loop muted="{{false}}"></video>
+  <view class="content">
+    <!-- 视频信息 -->
+    <view class="video-info">
+      <view class="title">{{mvDetail.name}}</view>
+      <view class="author">{{mvDetail.artistName}}</view>
+      <view class="info">
+        {{format.formatCount(mvDetail.playCount)}}
+        {{mvDetail.publishTime}}
+      </view>
+    </view>
+    <!-- 推荐视频 -->
+    <view class="recommend-video">
+      <view class="title">推荐视频</view>
+      <block wx:for="{{relatedVideo}}" wx:key="id">
+        <view class="item">
+          <view class="image">
+            <image src="{{item.coverUrl}}" mode="widthFix" />
+            <view class="count">{{format.formatCount(item.durationms)}}</view>
+          </view>
+          <view class="video-info">
+            <view class="title">{{item.title}}</view>
+            <view class="author">{{item.creator[0].userName}}</view>
+          </view>
+        </view>
+      </block>
+    </view>
+  </view>
+</view>
